@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
 
-/* font-family: 'Public Sans', sans-serif; */
-/* 800, 400, 300 */
-
 html {
     max-width: 1420px;
     min-width: 375px;
@@ -17,13 +14,8 @@ html {
 .container {
     padding: 45px;
     display: flex;
-    /* deve vir no container pai, torna todos os filhos em flex */
     justify-content: space-between;
-    /* coloca o logo de um lado e o nav do outro (HORIZONTALMENTE) */
     align-items: center;
-    /* alinha o menu com o nav (VERTICALMENTE).  */
-    /* - container pai
-- alinhou logo-nome com o nav */
 }
 
 .logo {
@@ -45,25 +37,12 @@ img {
 
 ul {
     display: flex;
-    /* 
-    - isso substitui o antigo (display: inline-block),
-    - só pegou quando colocado na "ul"
-    - como o display:flex é "row" (linha) por padrão, dispensa essa definição) 
-    */
 }
 
 nav ul li {
-    /* display: inline-block; */
-    /* display: inline-block; funciona, mas é antigo. o ideal é usar o flex. 
-    - o display-flex só pega quando colocado na ul 
-    */
-
     font-size: 15px;
     font-weight: 400;
-
     padding-left: 30px;
-    /* padding-top: 15px; */
-    /* ilignt-itens: center (no container pai) faz com que o logo e o menu fiquem alinhados  */
 }
 
 .menu-cor a {
@@ -84,26 +63,19 @@ nav ul li {
 
 
 /* 
+ = -= - =- = -= - =- =- = -= - =- = -
+     
+        MEDIA    DISPLAY
 
-     MEDIA    DISPLAY
-
-
+= -= - =- = -= - =- =- = -= - =- = -
 */
 
 
 @media(max-width: 817px) {
     .container {
         padding: 45px;
-
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-
-        /* display: grid; */
-        /* 
-        - deve vir no container pai, torna todos os filhos em flex 
-        - mudar de flex pra gird quebrou a linha, como se tivesse deixado "block", ocupando toda a linha,  o "logo-nome" e o "nav"
-        */
     }
 
     .logo {
